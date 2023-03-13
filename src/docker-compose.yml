@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  nginx:
+    build: 345/
+  web:
+    build: 8080/
+    ports:
+      - "127.0.0.1:80:8080"
+    depends_on:
+      - nginx
